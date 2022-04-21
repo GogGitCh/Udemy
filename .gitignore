@@ -1,4 +1,6 @@
 *.ico
 *.png
 *.ini
+*.zip
 test.js
+*_MACOSX

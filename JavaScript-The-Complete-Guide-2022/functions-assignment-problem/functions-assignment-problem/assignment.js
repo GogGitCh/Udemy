@@ -1,5 +1,31 @@
-function sayHello(name) {
-  console.log('Hi ' + name);
+// function sayHello(name) {
+//   console.log('Hi ' + name);
+// }
+
+// sayHello();
+
+let sayHello = name => console.log('Hi ' + name);
+
+sayHello('George');
+
+let sayHello1 = (phrase, name) => console.log(phrase + ' ' +name);
+
+sayHello1('Hi','George');
+
+let sayHello2 = () => {return "Hi George"};
+
+console.log(sayHello2());
+
+let sayHello3 = name => console.log('Hi ' + name);
+
+sayHello3(undefined || 'Goshe');
+
+
+
+let playingFn = (cb, ...sports) => {
+  cb(`I am playing ${sports}`);
 }
 
-sayHello();
+let printingResult = sentence => console.log(sentence);
+
+playingFn(printingResult,'Basketball','Football','Voleyball');
