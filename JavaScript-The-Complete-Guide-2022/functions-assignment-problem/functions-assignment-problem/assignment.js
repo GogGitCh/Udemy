@@ -23,7 +23,16 @@ sayHello3(undefined || 'Goshe');
 
 
 let playingFn = (cb, ...sports) => {
-  cb(`I am playing ${sports}`);
+  let isEmpty = false;
+  for (const sport of sports) {
+    if (!sport) {
+      isEmpty = true;
+      return
+    }
+  }
+  if (!isEmpty) {
+    cb(`I am playing ${sports}`);   
+  }
 }
 
 let printingResult = sentence => console.log(sentence);
