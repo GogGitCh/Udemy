@@ -14,3 +14,6 @@ let multipyArrOfNums = filtered.reduce((prev, curr) => prev * curr, 1);
 console.log(multipyArrOfNums);
 
 // 2 
+
+let findMax = (task1Arguments) => {Math.max(...task1Arguments)};
+console.log(findMax(arrOfNums));
