@@ -33,3 +33,13 @@ console.log(findMax(arrOfNums));
 const [MAX,MIN] = findMax(arrOfNums);
 console.log(MAX);
 console.log(MIN);
+
+// 4
+
+const nonDuplicateList = Set();
+nonDuplicateList.add('1');
+nonDuplicateList.add('2');
+nonDuplicateList.add('bri');
+nonDuplicateList.add('bri');
+
+console.log(nonDuplicateList);
