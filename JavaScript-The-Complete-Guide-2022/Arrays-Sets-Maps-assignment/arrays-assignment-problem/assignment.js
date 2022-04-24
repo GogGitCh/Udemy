@@ -15,5 +15,21 @@ console.log(multipyArrOfNums);
 
 // 2 
 
-let findMax = (task1Arguments) => {Math.max(...task1Arguments)};
+// let findMax = (task1Arguments) => Math.max(...task1Arguments);
+// console.log(findMax(arrOfNums));
+
+// 3
+
+let findMax = (task1Arguments) => {
+    let arrMaxMin = [];
+    let max = Math.max(...task1Arguments);
+    let min = Math.min(...task1Arguments);
+    arrMaxMin.push(max);
+    arrMaxMin.push(min);
+    return arrMaxMin;
+};
 console.log(findMax(arrOfNums));
+
+const [MAX,MIN] = findMax(arrOfNums);
+console.log(MAX);
+console.log(MIN);
