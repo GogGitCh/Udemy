@@ -1,20 +1,30 @@
 // 1
 console.log("-------------------------");
 class Course {
+    #_price;
   constructor(title, length, price) {
     this.title = title;
     this.length = length;
-    this.price = price;
+    this.#_price = price;
+  }
+  get () {
+      return "$" + this.#_price;
+  }
+  set (value) {
+      if (value > 0) {
+          throw "invalid value";
+      }
+      this.#_price = value;
   }
 
   lengthPrice() {
-    return `${this.price} / ${this.length} = ${
+    return `${this.#_price} / ${this.length} = ${
       this.price / this.length
     } per month`;
   }
 
   summary() {
-    return `The ${this.title} course has a length of ${this.length} months and you pay only \$${this.price}`;
+    console.log(`The ${this.title} course has a length of ${this.length} months and you pay only \$${this.price}`);
   }
 }
 
@@ -44,7 +54,7 @@ class PracticalCourse extends Course {
 
 class TheoreticalCourse extends Course {
   publish() {
-    return `This offer is within limited amount of time $`;
+    console.log(`This offer is within limited amount of time $`);
   }
 }
 
@@ -52,11 +62,17 @@ let practical = new PracticalCourse("Angular",65,50,69);
 let theoretical = new TheoreticalCourse("Veu",56,66,83);
 
 console.log(practical);
-console.log(practical.summary());;
-console.log(practical.publish());;
+practical.summary();
+// practical.publish();
 
 console.log(theoretical);
-console.log(theoretical.summary());;
-console.log(theoretical.publish());;
+// theoretical.summary();
+theoretical.publish();
+
 
 // 4
+
+// adding Getters and Setters
+
+// 5
+// theoretical._price = -1; // Check if the private propperty works  
