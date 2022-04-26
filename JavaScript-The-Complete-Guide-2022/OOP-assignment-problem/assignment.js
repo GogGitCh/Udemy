@@ -7,10 +7,10 @@ class Course {
     this.length = length;
     this.#_price = price;
   }
-  get () {
+  get price () {
       return "$" + this.#_price;
   }
-  set (value) {
+  set price (value) {
       if (value > 0) {
           throw "invalid value";
       }
